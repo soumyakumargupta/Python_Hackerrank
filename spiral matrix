@@ -1,0 +1,20 @@
+l=[]
+r,c=list(map(int,input().split()))
+for i in range(r):
+    l1=list(map(int,input().split()))[0:c]
+    l.append(l1)
+sr=0
+sc=0
+while sr<r and sc<c:
+    for i in range (sc,c):
+        print(l[sr][i],end=' ')
+    sr=sr+1
+    for j in range (sr,r):
+        print(l[j][c-1],end=' ')
+    c=c-1
+    for k in range (c-1,sc,-1):
+        print(l[r-1][k],end=' ')
+    r=r-1
+    for m in range (r,sr-1,-1):
+        print(l[m][sc],end=' ')
+    sc=sc+1
